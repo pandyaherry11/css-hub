@@ -1,0 +1,291 @@
+<!-- APPLICATION SECTION -->
+<section id="applications" class="application-section">
+
+    <div class="application-overlay"></div>
+
+    <div class="application-content">
+
+        <div class="application-badge">
+            APPLICATION PORTAL
+        </div>
+
+        <h2>Application Services</h2>
+
+        <p>
+            Select an application service below to continue.
+        </p>
+
+        <div class="application-cards">
+
+            <!-- New Application -->
+            <div class="application-card">
+                <div class="app-icon">📝</div>
+                <h3>New Application</h3>
+                <p>Start a new application quickly and easily.</p>
+
+                <a href="new-application.html" class="app-btn">
+                    Open Application →
+                </a>
+            </div>
+
+            <!-- Renew Application -->
+            <div class="application-card">
+                <div class="app-icon">🔄</div>
+                <h3>Renew Application</h3>
+                <p>Renew your existing application online.</p>
+
+                <a href="renew-application.html" class="app-btn">
+                    Renew Now →
+                </a>
+            </div>
+
+            <!-- Download Application -->
+            <div class="application-card download-card">
+                <div class="app-icon">⬇️</div>
+                <h3>Download Application</h3>
+                <p>Download the application form in PDF format.</p>
+
+                <a href="application.pdf"
+                   download
+                   class="app-btn download-btn">
+                    Download Application ↓
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+/* ================================
+   APPLICATION SECTION
+================================ */
+
+.application-section {
+    position: relative;
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 80px 20px;
+
+    background-image: url("my pic.png.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    overflow: hidden;
+}
+
+/* Dark overlay over your photo */
+.application-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,0,0,0.82),
+            rgba(0,0,0,0.45),
+            rgba(0,0,0,0.75)
+        );
+
+    z-index: 1;
+}
+
+/* Main content */
+.application-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1200px;
+
+    text-align: center;
+    color: white;
+}
+
+/* Badge */
+.application-badge {
+    display: inline-block;
+
+    padding: 8px 20px;
+    margin-bottom: 15px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+}
+
+/* Heading */
+.application-content h2 {
+    margin: 5px 0 10px;
+
+    font-size: 46px;
+    font-weight: 800;
+
+    text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+}
+
+.application-content > p {
+    margin-bottom: 40px;
+
+    font-size: 17px;
+    color: rgba(255,255,255,0.9);
+}
+
+/* Cards container */
+.application-cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+/* Application Card */
+.application-card {
+    padding: 35px 25px;
+
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 22px;
+
+    background: rgba(0,0,0,0.42);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.35);
+
+    transition: 0.35s ease;
+}
+
+.application-card:hover {
+    transform: translateY(-10px);
+
+    background: rgba(0,0,0,0.60);
+
+    border-color: rgba(255,255,255,0.55);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.55);
+}
+
+/* Icon */
+.app-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.12);
+
+    font-size: 32px;
+}
+
+/* Card heading */
+.application-card h3 {
+    margin: 5px 0 10px;
+
+    font-size: 22px;
+}
+
+/* Card text */
+.application-card p {
+    margin: 0 0 25px;
+
+    color: rgba(255,255,255,0.8);
+
+    line-height: 1.6;
+}
+
+/* Buttons */
+.app-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 22px;
+
+    border-radius: 50px;
+
+    background: white;
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: 700;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.app-btn:hover {
+    transform: scale(1.05);
+
+    background: #111;
+    color: white;
+}
+
+/* Download button */
+.download-btn {
+    background: #111;
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.download-btn:hover {
+    background: white;
+    color: #111;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 850px) {
+
+    .application-cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .application-content h2 {
+        font-size: 34px;
+    }
+
+    .application-section {
+        background-attachment: scroll;
+    }
+}
+
+</style>
